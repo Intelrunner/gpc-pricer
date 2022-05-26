@@ -1,0 +1,12 @@
+modules/
+env/
+venv/
+.env/
+.venv/
+.env
+.pem
+.p12
+.key
+.crt
+.csr
+.crl

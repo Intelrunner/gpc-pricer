@@ -1,7 +1,9 @@
 from flask import escape
 import functions_framework
 import pandas as pd
+import json
 df = pd.read_csv('./gpi.csv')
+
 
 
 @functions_framework.http
@@ -15,4 +17,4 @@ def grabber(request):
         id = request_args['SKU Description']
     else:
         id = "N2 Instance Ram running in Sydney"
-    return df.loc[df['SKU description'] == id, 'List price ($)']
+    return json.loads(df.loc[df['SKU description'] == id, 'List price ($)'])
