@@ -26,4 +26,5 @@ def grabber(request):
     x = df.loc[df['SKU description'] == id, 'List price ($)']
     y = x.to_json(orient='values')
     z = json.loads(y)
+    # TODO Test stuff
     return(z[0])
