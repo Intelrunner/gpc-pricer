@@ -12,5 +12,9 @@
 # below:
 .git
 .gitignore
+/__pycache__
+/venv
+.flake8
+/.trunk
 
 node_modules
