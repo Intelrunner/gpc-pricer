@@ -5,8 +5,6 @@ import pandas as pd
 from flask import escape
 
 df = pd.read_csv("./gpi.csv")
-rab = 
-
 """{'SKU description': 
     ['E2 Instance Core running in Americas',
     'E2 Instance Core running in Japan',
@@ -57,7 +55,7 @@ def grabber(request):
         <https://flask.palletsprojects.com/en/1.1.x/api/#flask.make_response>.
     """
     request_args=request.args
-    df2 = pd.DataFrame(request_args)
+    df2 = pd.DataFrame(request_args['description'])
 
     df2=df2.merge(df, on='SKU description', how='left')
     df2.drop(df2.columns.difference(['SKU description', 'List price ($)']),1,inplace=True)
@@ -80,5 +78,5 @@ for index,row in df2.iterrows():
     
     
 if __name__ == "__main__":
-    grabber(request)
+    grabber()
     
