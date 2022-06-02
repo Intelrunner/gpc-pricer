@@ -7,5 +7,9 @@
 			"path": "../articles"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"yaml.schemas": {
+			"https://json.schemastore.org/cloudbuild.json": "file:///Users/doit/projects/gpc-pricer/cloudbuild.yaml"
+		}
+	}
 }
